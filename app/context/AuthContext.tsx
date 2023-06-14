@@ -93,10 +93,8 @@ export const AuthProvider = ({children}: any) => {
 
   const logout = async () => {
     await Keychain.resetGenericPassword();
-
     axios.defaults.headers.common['Authorization'] = '';
-
-    setAuthState({token: null, authenticated: null});
+    setAuthState({token: null, authenticated: false});
   };
 
   const value = {
