@@ -60,7 +60,7 @@
     - create useEffect that loads Token
     - create register function
     - create login function
-      - create logout function
+    - create logout function
     - create value variable and save functions
     - return children nested within AuthContext.Provider
 
