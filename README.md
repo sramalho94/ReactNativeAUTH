@@ -59,5 +59,5 @@
 
 ---
 
-[ReactNativeKeychainDocs](https://github.com/oblador/react-native-keychain)
-[RecordingPart1](https://drive.google.com/drive/u/2/folders/1p-dxb0lSyd0BJQB-uSrrx4rHg0U2M2EQ)
+- [ReactNativeKeychainDocs](https://github.com/oblador/react-native-keychain)
+- [RecordingPart1](https://drive.google.com/drive/u/2/folders/1p-dxb0lSyd0BJQB-uSrrx4rHg0U2M2EQ)
