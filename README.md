@@ -52,3 +52,12 @@
 - Build out Login screen with appropriate form that uses the onLogin and Register functions from AuthContext
   -Build out Home screen and create a Logout Button
 - Finito!
+
+---
+
+## Resources
+
+---
+
+[ReactNativeKeychainDocs](https://github.com/oblador/react-native-keychain)
+[RecordingPart1](https://drive.google.com/drive/u/2/folders/1p-dxb0lSyd0BJQB-uSrrx4rHg0U2M2EQ)
