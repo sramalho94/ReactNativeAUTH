@@ -47,8 +47,34 @@
 
 - run `mkdir app app/context`
 - run `touch app/context/AuthContext.tsx`
-- build out the AuthContext.tsx file with AuthProps Interface, useAuth function, and AuthContext.Provider return at the bottom
-- create your screens and configure App.tsx for routing
+- build out the AuthContext.tsx file
+
+  - create `Auth Props` Interface
+  - create `TOKEN_KEY` variable
+  - create `API_URL` using a ternary that checks for the platform OS
+  - create AuthContext using createContext hook
+    - create AuthContext function
+  - create AuthProvider function
+
+    - set AuthState
+    - create useEffect that loads Token
+    - create register function
+    - create login function
+      - create logout function
+    - create value variable and save functions
+    - return children nested within AuthContext.Provider
+
+- Build out App.tsx for routing:
+
+  - define `RootStackParamList`
+  - create Stack
+  - create AppNavigator
+
+    - create useEffect within AppNavigator that checks to see the Authentication state
+    - return NavigationContainer with Stack and Screens
+
+  - edit App function so that `AuthProvider` wraps around everything, with a `SafeAreView` child component that has `AppNavigator` as a child
+
 - Build out Login screen with appropriate form that uses the onLogin and Register functions from AuthContext
   -Build out Home screen and create a Logout Button
 - Finito!
