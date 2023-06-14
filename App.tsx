@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {SafeAreaView} from 'react-native';
@@ -15,15 +15,21 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigator = () => {
   const {authState} = useAuth();
+  const navigationRef = React.useRef(null);
+
+  useEffect(() => {
+    if (authState?.authenticated) {
+      navigationRef.current?.navigate('Home');
+    } else {
+      navigationRef.current?.navigate('Login');
+    }
+  }, [authState]);
 
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator>
-        {authState?.authenticated ? (
-          <Stack.Screen name="Home" component={Home} />
-        ) : (
-          <Stack.Screen name="Login" component={Login} />
-        )}
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );
